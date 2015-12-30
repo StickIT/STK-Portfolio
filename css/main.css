@@ -1,0 +1,440 @@
+@font-face {
+  font-family: 'Glyphicons Halflings';
+
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), 
+  url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), 
+  url('../fonts/glyphicons-halflings-regular.woff') format('woff'), 
+  url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), 
+  url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+@font-face {
+    font-family: "Avenir";
+    font-weight: bold;
+    src: url('../fonts/Avenir-Black.ttf');
+}
+
+@font-face {
+    font-family: "Avenir";
+    font-weight: normal;
+    src: url('../fonts/Avenir-Medium.ttf');
+}
+
+@font-face {
+    font-family: "Avenir";
+    font-weight: lighter;
+    src: url('../fonts/Avenir-Roman.ttf');
+}
+
+body {
+  font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+.home-bg {
+  height: 100%;
+  width: 100%;
+  display: block;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url('../ressources/home-bg.jpg');
+  background-position: 25% 30%;
+  background-repeat: no-repeat;
+}
+
+header {
+  margin-top: 60px;
+  z-index: 20;
+  position: absolute;
+  width: 100%;
+}
+
+.logo-yo {
+  position: static;
+  margin-top: 40px;
+  margin-left: 100px;
+  float: none;
+  background-image: url('../ressources/yo-logo.svg');
+  background-position: 0px 0px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.brand-logo {
+  position: relative;
+  float: left;
+  display: inline-block;
+  height: auto;
+  margin-left: 100px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  padding-left: 80px;
+  float: none;
+  background-image: url('../ressources/yo-logo.svg');
+  background-position: 0px 50%;
+  background-size: 74px;
+  background-repeat: no-repeat;
+  color: white;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.prod-btn {
+  float: right;
+  position: relative;
+  text-decoration: none;
+  font-family: "Avenir";
+  font-size: 1em;
+  margin-top: 14px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.6em 4em 0.3em 1em;
+
+  -webkit-transition: color .5s ease-in-out;
+    -moz-transition: color .5s ease-in-out;
+    -o-transition: color .5s ease-in-out;
+    transition: color .5s ease-in-out;
+}
+
+.meet-btn {
+  float: right;
+  position: relative;
+  margin-right: 100px;
+  text-decoration: none;
+  font-family: "Avenir";
+  font-size: 1em;
+  margin-top: 12px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border:2px solid #fff;
+  border-radius: 2px;
+  padding: 0.6em 1em 0.3em 1em;
+
+  -webkit-transition: color .5s ease-in-out;
+    -moz-transition: color .5s ease-in-out;
+    -o-transition: color .5s ease-in-out;
+    transition: color .5s ease-in-out;
+}
+
+.meet-btn:hover,.prod-btn:hover{
+  color: #fed746;  
+}
+
+.home-who {
+  background-color: #202123;
+  opacity:.98;
+  top: 0px;
+  right: 0px;
+  min-height: 100%;
+  position: absolute;
+  float:right;
+  display: none;
+
+  padding: 0px;
+  overflow: hidden;
+
+  transition: all .5s ease-in-out;
+  right: -50%;
+  z-index: 21;
+}
+
+#display-who:target {
+  right: 0%;
+  display: block;
+}
+
+.contact-btn {
+  float: left;
+  position: relative;
+  text-decoration: none;
+  font-family: "Avenir";
+  font-size: 0.6em;
+  margin-top: 30px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border:2px solid #fff;
+  padding: 0.6em 1.6em 0.4em 1.6em !important;
+  border-radius: 20px;
+}
+
+.prod-welcome-btn {
+  display:inline-block;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: "Avenir";
+  font-size: 1em;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border:2px solid #fff;
+  padding: 0.4em 1.6em 0.4em 1.6em !important;
+  border-radius: 20px;
+  -webkit-transition: color .4s ease-in-out;
+    -moz-transition: color .4s ease-in-out;
+    -o-transition: color .4s ease-in-out;
+    transition: color .4s ease-in-out;
+}
+
+.meet-btn:hover .contact-btn:hover{
+  color: #fed746;
+}
+
+.index-form {
+  display:inline-block;
+  text-align: center;
+}
+
+@media screen and (max-width:640px){
+  .index-form{
+    bottom:10%;
+    padding:0 5%;
+    left:0;
+    display:none
+  }
+}
+
+.index-form span {
+  font-size:2.4em;
+  font-weight:bold
+}
+
+.index-form input {
+  font-size:2.4em;
+  font-weight:normal;
+  background:none;
+  color:#fff;
+  outline:none;
+  border:none;
+  border-bottom:2px solid #fff;
+  width: 9em;
+}
+
+@media screen and (max-width:640px){
+  .index-form input {
+    font-size:26px;
+    padding:3% 20% 3% 0;width:100%
+  }
+}
+
+.index-form a {
+  color:#fff;
+  text-transform:uppercase;
+  opacity:.5;
+  width:100%;
+  text-decoration: none;
+}
+
+.index-form a:hover {
+color:#27CFC3; 
+-webkit-transition: color .4s ease-in-out;
+    -moz-transition: color .4s ease-in-out;
+    -o-transition: color .4s ease-in-out;
+    transition: color .4s ease-in-out;
+}
+
+@media screen and (max-width:640px) {
+.index-form a {
+  margin-top:20px;
+  position:absolute;
+  right:20px;
+  top:40px
+  }
+}
+
+.home-welcome {
+  display: inline-block;
+  text-align: center;
+  position: absolute;
+  bottom: 4%;
+  z-index: 1;
+}
+
+.header-who {
+  margin-top: 75px;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1.8em;
+}
+
+.header-who h1{
+  font-weight: bold;
+  padding-right: 40px;
+  margin-top: 0px;
+  display: inline;
+  line-height: 1.3;
+}
+
+.header-who .fa-times{
+  color: #fed746;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.4em;
+  -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.header-who .fa-times:hover{
+  -moz-transform: rotate(90deg);
+  -webkit-transform: scrotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.header-who div a {
+  padding-right: 10px;
+  color: #fff;
+  -webkit-transition: color .4s ease-in-out;
+    -moz-transition: color .4s ease-in-out;
+    -o-transition: color .4s ease-in-out;
+    transition: color .4s ease-in-out;
+}
+
+.header-who .first-p {
+  margin-top: 60px;
+}
+
+.header-who .description {
+  text-transform: none;
+  font-weight: normal !important;
+  font-size: 0.8em;
+  text-align: justify;
+  margin-bottom: 30px;
+  letter-spacing: 0.4px;
+}
+
+.header-who a:hover {
+  color: #fed746;
+}
+
+.home-title {
+  display: inline-block;
+  text-align: center;
+  font-size: 4em;
+  color: #fff;
+  width: 100%;
+  margin-bottom: 6px;
+}
+
+.skip-btn, .enter-btn {
+  font-size: 1.2em;
+  padding-left: 0.4em;
+  display: inline ;
+  width: 60px !important;
+}
+
+footer {
+  background-color: #1d2127;
+  padding-bottom: 80px;
+  box-shadow: -1px 2px 10px 3px rgba(0, 0, 0, 0.3) inset;
+}
+
+.footer-logo{
+  width: 80px;
+  height:auto;
+}
+
+.logo-name{
+  padding-top: 15px;
+  padding-bottom: 10px;
+  padding-left: 80px;
+  background-image: url('../ressources/yo-logo.svg');
+  background-position: 0px 50%;
+  background-size: 74px;
+  background-repeat: no-repeat;
+  color: white;
+  font-size: 1.8em;
+  font-weight: bold;
+  top:80px;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 4px;
+  margin-top: 8px;
+}
+
+h2 {
+  margin-top: 0px;
+  color:#b2b1b1;
+  font-weight: normal;
+}
+
+.footer-1 {
+  float:left;
+  top:40px;
+}
+
+.footer-1>.copyright {
+color: rgb(107, 107, 107);
+margin-top: 10px;
+}
+
+.footer-2 {
+display: inline-block;
+text-align: center;
+vertical-align: middle;
+top:80px;
+}
+
+.footer-3 {
+float: right;
+top:80px;
+}
+
+.footer-2 > .fa-chevron-right {
+  padding: 0px 10px;
+  color: #fed746;
+  font-size: 1.1em;
+}
+
+.footer-2>a {
+font-weight: normal;
+color: rgb(107, 107, 107);
+text-transform: uppercase;
+font-size: 1em;
+font-weight: bold;
+letter-spacing: 2;
+-webkit-transition: color .4s ease-in-out;
+    -moz-transition: color .4s ease-in-out;
+    -o-transition: color .4s ease-in-out;
+    transition: color .4s ease-in-out;
+text-decoration: none;
+}
+
+.footer-2>a:hover {
+  color:#27CFC3;
+}
+
+.footer-3>a {
+  padding: 0px 6px;
+  color: rgb(107, 107, 107);
+  font-size: 1.4em;
+  -webkit-transition: color .4s ease-in-out;
+    -moz-transition: color .4s ease-in-out;
+    -o-transition: color .4s ease-in-out;
+    transition: color .4s ease-in-out;
+  float: right;
+}
+
+.footer-3>a:hover{
+  color:#27CFC3;
+}
